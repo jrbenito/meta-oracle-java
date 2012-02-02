@@ -1,2 +1,16 @@
 These are recipes for Oracle java packages. These are generated from Oracle's
 publically released binary java packages.
+
+The Oracle Java files are released by Oracle under "Oracle Binary Code License
+Agreement for Java SE" license.
+
+More information about license: 
+http://www.oracle.com/technetwork/java/javasebusiness/documentation/java-se-bcl-license-430205.html
+or 
+http://www.oracle.com/
+
+These recipes will not build by default. In order to build them you need to
+enable "oracle-java" license by adding this line in your local.conf
+
+LICENSE_FLAGS_WHITELIST += "oracle_java"
+
