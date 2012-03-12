@@ -22,3 +22,5 @@ do_install () {
 INSANE_SKIP_${PN} = "${ERROR_QA} ${WARN_QA}"
 
 FILES_${PN} = "/usr/"
+
+RPROVIDES += "java2-runtime"
