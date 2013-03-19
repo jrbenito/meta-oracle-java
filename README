@@ -1,5 +1,8 @@
-These are recipes for Oracle java packages. These are generated from Oracle's
-publically released binary java packages.
+meta-oracle-java
+================
+
+This is a layer providing recipes for Oracle java packages. These are
+generated from Oracle's publically released binary java packages.
 
 The Oracle Java files are released by Oracle under "Oracle Binary Code License
 Agreement for Java SE" license.
@@ -14,3 +17,20 @@ enable "oracle-java" license by adding this line in your local.conf
 
 LICENSE_FLAGS_WHITELIST += "oracle_java"
 
+Notes
+=====
+The download URLs mentioned in the SRCURI of the oracle-java recipes
+may show fetch issues with the built in bitbake wget fetcher. This is caused
+by the pre-requirement of clicking the "accept license" button on the oracle
+download webpage. So if you see fetch issues for the oracle java recipes,
+then you can overcome the issue by opening the SRCURI links manually in a web
+browser, downloading the tarballs, and storing in the bitbake download
+location. And the bitbake download location is specified by DL_DIR variable
+in build configuration file (conf/local.conf)
+
+Where to Send Patches
+=====================
+Please submit any patches against this layer to the Yocto mailing list
+(yocto@yoctoproject.org) and cc: the maintainer:
+
+Maintainer: Nitin A Kamble <nitin.a.kamble@intel.com>
