@@ -30,7 +30,15 @@ in build configuration file (conf/local.conf)
 
 Where to Send Patches
 =====================
-Please submit any patches against this layer to the Yocto mailing list
-(yocto@yoctoproject.org) and cc: the maintainer:
+Please submit any patches against this layer to the Yocto mailing list like:
 
-Maintainer: Nitin A Kamble <nitin.a.kamble@intel.com>
+git send-email --to=yocto@yoctoproject.org -M -1 --subject-prefix="meta-oracle-java][PATCH"
+
+Please substitute "PATCH" with "PATCH v2" if you are submitting a revised version after
+addressing feedback (or v3, v4 etc.)
+
+Maintainers:
+Bruce Ashfield <bruce.ashfield@windriver.com>
+Pavel Shumeika <Pavel_Shumeika@epam.com>
+Maxin B. John <maxin.john@enea.com>
+Vladimir Redzhepov <Vladimir_Redzhepov@epam.com>
