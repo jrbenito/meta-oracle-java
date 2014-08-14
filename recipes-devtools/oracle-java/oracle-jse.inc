@@ -6,6 +6,8 @@ LIC_FILES_CHKSUM = "\
 	file://${WORKDIR}/${JDK_JRE}${PV}_${PV_UPDATE}/THIRDPARTYLICENSEREADME.txt;md5=c339b34e3da6673d2c5950d0f8808f8c \
 	"
 
+FETCHCMD_wget_append = " --header=Cookie:oraclelicense=a "
+
 # get the java update version in the resulting package
 PR =. "u${PV_UPDATE}"
 S = "${WORKDIR}"
