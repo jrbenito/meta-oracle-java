@@ -19,14 +19,14 @@ LICENSE_FLAGS_WHITELIST += "oracle_java"
 
 Notes
 =====
-The download URLs mentioned in the SRCURI of the oracle-java recipes
-may show fetch issues with the built in bitbake wget fetcher. This is caused
-by the pre-requirement of clicking the "accept license" button on the oracle
-download webpage. So if you see fetch issues for the oracle java recipes,
-then you can overcome the issue by opening the SRCURI links manually in a web
-browser, downloading the tarballs, and storing in the bitbake download
-location. And the bitbake download location is specified by DL_DIR variable
-in build configuration file (conf/local.conf)
+There are some known install problems for JRE packages due to dependencies
+reported by RPM package manager. Switching to DEB or IPK packaging temporarily
+fixes this.
+ie:
+PACKAGE_CLASSES = "package_deb"
+or
+PACKAGE_CLASSES = "package_ipk"
+in your 'local.conf' file
 
 Where to Send Patches
 =====================
