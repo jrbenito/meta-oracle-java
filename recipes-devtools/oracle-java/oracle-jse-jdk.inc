@@ -10,3 +10,11 @@ DESCRIPTION = "This is the proprietary JDK from Sun/Oracle, with the Hotspot JVM
 
 JDK_JRE = "jdk"
 require oracle-jse.inc
+
+do_install_class-native() {
+    install -d -m 0755                      ${D}${bindir}/${JDK_JRE}${PV}_${PV_UPDATE}
+    cp -a ${S}/${JDK_JRE}${PV}_${PV_UPDATE} ${D}${bindir}/
+    ln -sf ${JDK_JRE}${PV}_${PV_UPDATE}     ${D}${bindir}/java
+}
+
+BBCLASSEXTEND = "native"
