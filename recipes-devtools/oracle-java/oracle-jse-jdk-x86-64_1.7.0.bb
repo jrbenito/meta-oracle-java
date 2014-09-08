@@ -1,9 +1,9 @@
-PR = "r0"
-PV_UPDATE = "25"
+PV_UPDATE = "67"
+BUILD_NUMBER = "01"
 
 require oracle-jse-jdk.inc
 
-SRC_URI = "http://download.oracle.com/otn-pub/java/jdk/7u25-b15/jdk-7u25-linux-x64.tar.gz"
+SRC_URI = "http://download.oracle.com/otn-pub/java/jdk/7u${PV_UPDATE}-b${BUILD_NUMBER}/jdk-7u${PV_UPDATE}-linux-x64.tar.gz"
 
-SRC_URI[md5sum] = "83ba05e260813f7a9140b76e3d37ea33"
-SRC_URI[sha256sum] = "f80dff0e19ca8d038cf7fe3aaa89538496b80950f4d10ff5f457988ae159b2a6"
+SRC_URI[md5sum] = "81e3e2df33e13781e5fac5756ed90e67"
+SRC_URI[sha256sum] = "54dd1e13edf18c64941a55da9c91210b53dc5cf48f1a8f4538c863049e346335"
