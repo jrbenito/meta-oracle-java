@@ -13,9 +13,11 @@ PR =. "u${PV_UPDATE}"
 S = "${WORKDIR}"
 
 do_install () {
-	install -d -m 0755			${D}/usr/${JDK_JRE}${PV}_${PV_UPDATE}
-	cp -a ${S}/${JDK_JRE}${PV}_${PV_UPDATE}	${D}/usr/
-	ln -sf ${JDK_JRE}${PV}_${PV_UPDATE}	${D}/usr/java
+	install -d -m 0755					${D}${datadir}/${JDK_JRE}${PV}_${PV_UPDATE}
+	cp -a ${S}/${JDK_JRE}${PV}_${PV_UPDATE}			${D}${datadir}/
+	ln -sf ${JDK_JRE}${PV}_${PV_UPDATE}			${D}${datadir}/java
+	install -d -m 0755					${D}${bindir}
+	ln -sf ${datadir}/${JDK_JRE}${PV}_${PV_UPDATE}/bin/java ${D}${bindir}/java
 }
 
 # All the files are provided in a binaray package, and keeping all the
@@ -27,5 +29,3 @@ INSANE_SKIP_${PN} = "${ERROR_QA} ${WARN_QA}"
 INHIBIT_PACKAGE_DEBUG_SPLIT = "1"
 
 FILES_${PN} = "/usr/"
-
-RPROVIDES_${PN} += "java2-runtime"

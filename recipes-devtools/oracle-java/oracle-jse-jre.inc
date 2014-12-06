@@ -10,3 +10,5 @@ DESCRIPTION = "This is the proprietary JRE from Sun/Oracle, with the Hotspot JVM
 
 JDK_JRE = "jre"
 require oracle-jse.inc
+
+RPROVIDES_${PN} += "java2-runtime"
