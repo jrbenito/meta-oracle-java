@@ -1,3 +1,25 @@
+This is the meta-oracle-java layer modified to latest java 1.7 available for ARM. At
+time of this writing it is "U75 Build 13" and as per Oracle it shall be the last for
+Java 1.7.
+
+Since Oracle changed the website, the original yocto procject mantained layer is not
+working. I first updated the recipe to look for lastest available build of Java 1.7
+and download it. Howver Oracle also changed download policy, now one needs to login
+and agree with license before download. This way neither yocto or my version of the
+recipe will work.
+
+Workaround:
+
+Manually login into Oracle website
+Manually download package ejre-7u75-fcs-b13-linux-arm-vfp-hflt-client_headless-18_dec_2014.tar.gz
+Move downloaded file to download dir of you Yocto build system
+
+Now my version of the layer shall install normaly.
+
+Everything else below is still valid.
+
+PS: if anyone has better idea I am open to try.
+
 meta-oracle-java
 ================
 
